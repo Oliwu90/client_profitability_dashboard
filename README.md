@@ -1,30 +1,40 @@
 # Client Profitability Dashboard
-This project analyzes monthly gross margins by client and regions using a Power BI dashboard powered by MySQL and Python.
+A fully automated Power BI dashboard that tracks client profitability using MySQL, Python, and cloud integrations.
 
-## 🔧 Components
-- **Python**: ETL script (`main.py`) reads and cleans raw data, then pushes to MySQL.
-- **MySQL**: Stores the cleaned table `client_profitability_raw`.
-- **Power BI**: Consumes MySQL data to visualize margin trends and YoY changes.
+## 📌 Features
+- 🐍 Python pipeline to pull, clean, and load work order data
+- 🗃️ MySQL backend for centralized storage
+- 📊 Power BI dashboard with dynamic metrics:
+  - Revenue, Vendor Cost, Gross Margin
+  - MoM % and YoY % change
+  - Client and State filters
+- ☁️ OneDrive-ready CSV export (gateway-free)
 
-## 📁 Structure
-- `main.py`: Loads environment variables and exports raw data to MySQL.
-- `sql/client_profitability.sql`: Base query to extract work order data.
-- `pbix/`: (Optional) Power BI dashboard files.
-- `.env.dev`: Example of required DB environment variables.
+## 🔧 Tech Stack
+- Python (pandas, SQLAlchemy, dotenv)
+- MySQL (AWS RDS)
+- Power BI (import mode)
+- OneDrive (cloud-based refresh)
 
-## ⚙️ Usage
-1. Fill in `.env.dev` with your MySQL credentials:
-DB_USER=username
-DB_PASS=password
-DB_HOST=host_url
-DB_NAME=readonlydata
+## 📂 Folder Structure
+client_profitability_dashboard/
+├── main.py # Data pipeline logic
+├── sql/
+│ └── client_profitability.sql
+├── .env.dev # Local DB credentials
+├── .gitignore
+└── README.md
 
-2. Run the pipeline:
-python main.py
+markdown
+Copy
+Edit
 
-## 📊 Key Metrics
-Gross Margin %
+## 🚀 Usage
+1. Run `main.py` to fetch and clean data
+2. Exported data lands in MySQL or OneDrive (based on setup)
+3. Power BI consumes the data and updates the dashboard
 
-MoM and YoY Margin Changes
-
-Work Orders by Client and State
+## 📈 Future Work
+- Power Automate integration
+- Enhanced tooltip narratives
+- Drill-throughs and export options
