@@ -1,6 +1,12 @@
 # Client Profitability Dashboard
 A fully automated Power BI dashboard that tracks client profitability using MySQL, Python, and cloud integrations.
 
+# Objective:
+This dashboard helps Guardian Asset Management (GAM) assess client-level financial performance by visualizing revenue, gross margin %, and MoM/YoY trends. It reveals profitability patterns over time to support strategic decisions.
+
+# Impact 
+I built a client profitability dashboard in Power BI using data pulled from MySQL via Python. It highlights trends in revenue and margin by client and state. One key metric, Margin % YoY Change, surfaced declining profitability for certain clients, helping operations take corrective action. It replaced manual reports and is now used weekly to guide decisions.
+
 ## 📌 Features
 - 🐍 Python pipeline to pull, clean, and load work order data
 - 🗃️ MySQL backend for centralized storage
