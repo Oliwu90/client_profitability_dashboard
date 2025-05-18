@@ -18,16 +18,10 @@ A fully automated Power BI dashboard that tracks client profitability using MySQ
 
 ## 📂 Folder Structure
 client_profitability_dashboard/
-├── main.py # Data pipeline logic
-├── sql/
-│ └── client_profitability.sql
-├── .env.dev # Local DB credentials
-├── .gitignore
-└── README.md
-
-markdown
-Copy
-Edit
+- `main.py`: Loads environment variables and exports raw data to MySQL.
+- `sql/client_profitability.sql`: Base query to extract work order data.
+- `pbix/client_profitability_dashboard.pbix`: Power BI dashboard files.
+- `.env`: Example of required DB environment variables.
 
 ## 🚀 Usage
 1. Run `main.py` to fetch and clean data
@@ -35,6 +29,6 @@ Edit
 3. Power BI consumes the data and updates the dashboard
 
 ## 📈 Future Work
-- Power Automate integration
+- Gateway integration
 - Enhanced tooltip narratives
 - Drill-throughs and export options
